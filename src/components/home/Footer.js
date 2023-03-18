@@ -43,7 +43,11 @@ const Footer = () => {
         onPress={() => navigation.navigate('Shop')}
         image={shop}
       />
-      <Button buttonStyle={buttonStyle} image={profile} />
+      <Button
+        buttonStyle={buttonStyle}
+        onPress={() => navigation.navigate('Shop')}
+        image={profile}
+      />
     </View>
   );
 };

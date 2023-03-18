@@ -10,6 +10,7 @@ import Home from './src/screens/Home';
 import Browse from './src/screens/Browse';
 import Videos from './src/screens/Videos';
 import Shop from './src/screens/Shop';
+import Profile from './src/screens/Profile';
 
 import React from 'react';
 
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Shop"
+        initialRouteName="Splash"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Login" component={Login} />
@@ -35,6 +36,7 @@ const App = () => {
         <Stack.Screen name="Videos" component={Videos} />
         <Stack.Screen name="Browse" component={Browse} />
         <Stack.Screen name="Shop" component={Shop} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -31,10 +31,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '7%',
-    borderTopColor: '#8A8A8A',
-    borderTopWidth: 2,
     marginBottom: 10,
-    marginTop: -18,
   },
   sectionStyle: {
     display: 'flex',

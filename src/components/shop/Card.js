@@ -1,10 +1,14 @@
 import React from 'react';
-import {View, Image, Text} from 'react-native';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import MoreButton from '../home/MoreButton';
+import {useNavigation} from '@react-navigation/native';
 
 const Card = props => {
+  const navigation = useNavigation();
   return (
-    <View style={props.cardStyle}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate('ShopGroup')}
+      style={props.cardStyle}>
       <View style={props.profileViewStyle}>
         <Image style={props.profileStyle} source={props.image.profile} />
       </View>
@@ -20,7 +24,7 @@ const Card = props => {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

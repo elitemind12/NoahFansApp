@@ -34,8 +34,7 @@ const Card = props => {
             style={logoStyle}
             source={require('../../assets/images/jonDoe.png')}
           />
-          <Text style={textStyle}>Noah</Text>
-          <Text style={textStyle}>22 Februari 2023</Text>
+          <Text style={textStyle}>{props.person1}</Text>
         </View>
         <MoreButton />
       </View>

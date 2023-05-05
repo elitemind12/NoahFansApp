@@ -11,6 +11,12 @@ import Browse from './src/screens/Browse';
 import Videos from './src/screens/Videos';
 import Shop from './src/screens/Shop';
 import Profile from './src/screens/Profile';
+import Events from './src/screens/Events';
+import Songs from './src/screens/Songs';
+import ShopGroup from './src/screens/ShopGroup';
+import ShopItem from './src/screens/ShopItem';
+import Chat from './src/screens/Chat';
+import Status from './src/screens/Status';
 
 import React from 'react';
 
@@ -37,6 +43,12 @@ const App = () => {
         <Stack.Screen name="Browse" component={Browse} />
         <Stack.Screen name="Shop" component={Shop} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Events" component={Events} />
+        <Stack.Screen name="Songs" component={Songs} />
+        <Stack.Screen name="ShopGroup" component={ShopGroup} />
+        <Stack.Screen name="ShopItem" component={ShopItem} />
+        <Stack.Screen name="Chat" component={Chat} />
+        <Stack.Screen name="Status" component={Status} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,22 +1,9 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Button from './Button';
 import MoreButton from '../home/MoreButton';
 
-const PostCard = props => {
-  const {
-    viewStyle,
-    headerSection,
-    logoStyle,
-    textStyle,
-    centerStyle,
-    centerImageStyle,
-    playButton,
-    buttonsStyle,
-    buttonStyle,
-    footerText,
-    headerSection1,
-  } = styles;
+const postCard = props => {
   const like = {
     icon: require('../../assets/images/like.png'),
   };
@@ -27,138 +14,47 @@ const PostCard = props => {
     icon: require('../../assets/images/share.png'),
   };
   return (
-    <View>
-      <View style={props.titleViewStyle}>
-        <View style={props.titleProfileStyle}>
-          <Image
-            style={props.titleImageStyle}
-            source={require('../../assets/images/jonDoe.png')}
-          />
+    <View style={props.postCardViewStyle}>
+      <View style={props.headerViewStyle}>
+        <Image style={props.headerImageStyle} source={props.image.person1} />
+        <View style={props.textHeaderWrapper}>
+          <Text style={props.personTextStyle}>{props.person1} </Text>
+          <Text>Shared</Text>
+          <Text style={props.personTextStyle}> {props.person2} </Text>
+          <Text>Post</Text>
         </View>
-        <Text style={props.titleTextStyle}>Jono Doe Asli</Text>
       </View>
-      <View style={viewStyle}>
-        <View style={headerSection}>
-          <View style={headerSection1}>
-            <Image
-              style={logoStyle}
-              source={require('../../assets/images/Logo.png')}
-            />
-            <Text style={textStyle}>Noah</Text>
-            <Text style={textStyle}>22 Februari 2023</Text>
+      <View style={props.cardViewStyle}>
+        <View style={props.cardHeaderSection}>
+          <View style={props.cardHeaderSection1}>
+            <Image style={props.cardLogoStyle} source={props.image.person2} />
+            <Text style={props.cardTextStyle}>{props.person2}</Text>
+            <Text style={props.cardTextStyle}>{props.date}</Text>
           </View>
           <MoreButton />
         </View>
-        <View style={centerStyle}>
-          <Image style={centerImageStyle} source={props.image.pic} />
-          <TouchableOpacity style={playButton}>
+        <View style={props.cardCenterStyle}>
+          <Image style={props.cardCenterImageStyle} source={props.image.pic} />
+          <TouchableOpacity style={props.cardPlayButton}>
             <Image source={require('../../assets/images/PLAYLIST.png')} />
           </TouchableOpacity>
         </View>
-        <View style={buttonsStyle}>
-          <Button buttonStyle={buttonStyle} image={like} />
-          <Button buttonStyle={buttonStyle} image={message} />
-          <Button buttonStyle={buttonStyle} image={share} />
-        </View>
         <View>
-          <Text style={footerText}>{props.message}</Text>
+          <Text style={props.cardFooterText}>{props.message}</Text>
         </View>
       </View>
-      <View style={props}>
-        <View style={buttonsStyle}>
-          <Button buttonStyle={buttonStyle} image={like} />
-          <Button buttonStyle={buttonStyle} image={message} />
-          <Button buttonStyle={buttonStyle} image={share} />
+      <View style={props.footerViewStyle}>
+        <View style={props.buttonsStyle}>
+          <Button buttonStyle={props.buttonStyle} image={like} />
+          <Button buttonStyle={props.buttonStyle} image={message} />
+          <Button buttonStyle={props.buttonStyle} image={share} />
         </View>
         <View>
-          <Text style={footerText}>{props.message}</Text>
+          <Text style={props.footerText}>{props.message}</Text>
         </View>
       </View>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  viewStyle: {
-    backgroundColor: '#FFFFFF',
-    width: '100%',
-    height: 220,
-    borderRadius: 10,
-    padding: '3%',
-    marginBottom: '3%',
-    borderColor: '#8A8A8A',
-    borderWidth: 2,
-  },
-  headerSection: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignContent: 'center',
-    justifyContent: 'space-between',
-  },
-  headerSection1: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignContent: 'center',
-  },
-  logoStyle: {
-    width: 32,
-    height: 32,
-    borderRadius: 50,
-    marginRight: '5%',
-  },
-  textStyle: {
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
-    fontSize: 14,
-    fontWeight: 700,
-    color: '#000000',
-    display: 'flex',
-    alignItems: 'center',
-    textAlign: 'center',
-    marginRight: '3%',
-  },
-  centerStyle: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignContent: 'center',
-    marginTop: '3.5%',
-  },
-  centerImageStyle: {
-    width: '100%',
-    height: 85,
-    borderRadius: 10,
-  },
-  playButton: {
-    position: 'absolute',
-    width: 20,
-    height: 20,
-    top: '40%',
-    left: '45%',
-    tintColor: 'white',
-  },
-  buttonsStyle: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: '6%',
-    marginBottom: '2%',
-  },
-  buttonStyle: {
-    marginLeft: '3%',
-    height: 16,
-    width: 16,
-  },
-  footerText: {
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
-    fontSize: 12,
-    fontWeight: 500,
-    color: '#000000',
-    marginLeft: '3%',
-    display: 'flex',
-  },
-});
-
-export default PostCard;
+export default postCard;

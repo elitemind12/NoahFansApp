@@ -1,23 +1,25 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const Links = () => {
   const {viewStyle, textStyle, textStyle1} = styles;
+  const navigation = useNavigation();
   return (
     <View style={viewStyle}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Text style={textStyle1}>ALL</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
         <Text style={textStyle}>NOAH HOUSE</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Songs')}>
         <Text style={textStyle}>SONGS</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Events')}>
         <Text style={textStyle}>EVENTS</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Shop')}>
         <Text style={textStyle}>SHOP</Text>
       </TouchableOpacity>
     </View>

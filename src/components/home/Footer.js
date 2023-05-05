@@ -45,7 +45,7 @@ const Footer = () => {
       />
       <Button
         buttonStyle={buttonStyle}
-        onPress={() => navigation.navigate('Shop')}
+        onPress={() => navigation.navigate('Profile')}
         image={profile}
       />
     </View>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   viewStyle: {
     position: 'absolute',
     bottom: 0,
-    height: 68,
+    height: '10%',
     width: '100%',
     paddingTop: 4,
     backgroundColor: '#D00010',

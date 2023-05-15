@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
 
-const passInput = props => {
+const passInput = ({onChangeText, value}) => {
   const {inputStyle, viewStyle} = styles;
   return (
     <View style={viewStyle}>

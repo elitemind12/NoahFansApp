@@ -4,7 +4,7 @@ import Input from './Input';
 import CardFront from './CardFront';
 import Button from './Button';
 
-const Form = () => {
+const Form = ({navigation}) => {
   const {
     ShortInputStyle,
     cardName,
@@ -53,7 +53,7 @@ const Form = () => {
           <Image source={require('../../assets/images/WarningCircle.png')} />
         </View>
       </View>
-      <Button />
+      <Button navigation={navigation} />
     </View>
   );
 };

@@ -9,8 +9,9 @@ import ForgotPassword from '../components/login/ForgotPassword';
 import LoginWithoutAccountButton from '../components/login/LoginWithoutAccountButton';
 import LoginWithGoogle from '../components/login/LoginWithGoogle';
 
-const Login = ({navigation}) => {
+const Login = async ({navigation}) => {
   const {containerStyle, centerButtons} = styles;
+
   return (
     <View style={containerStyle}>
       <FrontImage />

@@ -1,10 +1,12 @@
 import React from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
-const Button = () => {
+const Button = ({navigation}) => {
   const {ButtonStyle, textStyle} = styles;
   return (
-    <TouchableOpacity style={ButtonStyle}>
+    <TouchableOpacity
+      style={ButtonStyle}
+      onPress={() => navigation.navigate('Home')}>
       <Text style={textStyle}>REGISTER</Text>
     </TouchableOpacity>
   );

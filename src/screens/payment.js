@@ -2,11 +2,11 @@ import React from 'react';
 import {StyleSheet, View, Dimensions} from 'react-native';
 import Form from '../components/payment/Form';
 
-const Payment = () => {
+const Payment = ({navigation}) => {
   const {containerStyle} = styles;
   return (
     <View style={containerStyle}>
-      <Form />
+      <Form navigation={navigation} />
     </View>
   );
 };

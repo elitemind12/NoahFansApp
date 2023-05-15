@@ -6,8 +6,8 @@ const Description = () => {
   return (
     <View style={viewStyle}>
       <Text style={textStyle}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida eget
-        ultricies pharetra scelerisque duis cursus.
+        Register to NoahFansApp to enjoy Noah band songs and latest album
+        release. your welcome.
       </Text>
     </View>
   );

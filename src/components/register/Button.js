@@ -7,8 +7,8 @@ const Button = ({navigation}) => {
     <View style={viewStyle}>
       <TouchableOpacity
         style={ButtonStyle}
-        onPress={() => navigation.navigate('Payment')}>
-        <Text style={textStyle}>Next</Text>
+        onPress={() => navigation.navigate('Home')}>
+        <Text style={textStyle}>Submit</Text>
       </TouchableOpacity>
     </View>
   );
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto',
     fontStyle: 'normal',
     fontWeight: 700,
-    fontSize: 12,
+    fontSize: 16,
     lineHeight: 15,
     display: 'flex',
     justifyContent: 'center',

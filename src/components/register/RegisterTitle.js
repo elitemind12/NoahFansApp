@@ -11,7 +11,7 @@ const RegisterTitle = ({navigation}) => {
           source={require('../../assets/images/LineStroke.png')}
         />
       </TouchableOpacity>
-      <Text style={textStyle}>Payment</Text>
+      <Text style={textStyle}>Register</Text>
     </View>
   );
 };

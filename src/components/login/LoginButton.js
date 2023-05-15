@@ -5,7 +5,7 @@ const LoginButton = ({navigation}) => {
   const {textStyle, loginButton} = styles;
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('Home')}
+      onPress={() => navigation.navigate('Register')}
       style={loginButton}>
       <Text style={textStyle}>LOG IN</Text>
     </TouchableOpacity>

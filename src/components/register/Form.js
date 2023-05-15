@@ -1,7 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Image} from 'react-native';
 import Input from './Input';
-import ModalDropdown from 'react-native-modal-dropdown';
 
 const Form = () => {
   const {
@@ -12,7 +11,6 @@ const Form = () => {
     Map,
     lastName,
     Email,
-    BirthDate,
     nationality,
     frontInput,
     formStyle,
@@ -35,16 +33,16 @@ const Form = () => {
         <Input placeholder="Enter your password" secureTextEntry={true} />
         <Image source={require('../../assets/images/Eye.png')} />
       </View>
+      <View style={Password}>
+        <Input placeholder="Confirm your password" secureTextEntry={true} />
+        <Image source={require('../../assets/images/Eye.png')} />
+      </View>
       <View style={City}>
         <View style={Map}>
           <Image source={require('../../assets/images/map.png')} />
           <Input placeholder="select city" />
         </View>
         <Image source={require('../../assets/images/CaretDown.png')} />
-      </View>
-      <View style={BirthDate}>
-        <ModalDropdown options={['option 1', 'option 2']} />
-        <Image source={require('../../assets/images/CalendarBlank.png')} />
       </View>
       <View style={nationality}>
         <Input placeholder="Your nationality" />
